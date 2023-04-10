@@ -1,0 +1,104 @@
+:root{
+    --main-color: #34495e;
+    --secondary-color: #ecf0f1;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{  
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(var(--main-color), var(--secondary-color));
+    min-height: 200vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.random, .hidden-num{
+    width: 30%;
+    margin: auto;
+    padding: 25px;
+    margin-top: 100px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    text-align: center;
+}
+.random h1{
+    margin-bottom: 50px;
+    font-size: 1.4rem;
+}
+.random button{
+    padding: 10px;
+    border: 1px solid var(--success-color);
+    background-color: var(--success-color);
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+.hidden-num{
+    display: none;
+}
+.hidden-num .blur-num{
+    margin-bottom: 50px;
+    font-weight: bolder;
+    font-size: 4rem;
+    filter: blur(20px);
+}
+.hidden-num .success{
+    padding: 10px;
+    background: var(--success-color);
+    color: #fff;
+    display: none;
+}
+.hidden-num .hight{
+    padding: 10px;
+    color: var(--success-color);
+    display: none;
+    font-weight: bolder;
+}
+.hidden-num .low{
+    padding: 10px;
+    color: var(--error-color);
+    display: none;
+    font-weight: bolder;
+    transition: 0.3s all;
+}
+.hidden-num .board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.hidden-num .board button{
+    display: block;
+    flex-basis: calc((100% / 3) - 5px);
+    padding: 10px 15px;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s all;
+}
+.hidden-num .board button:hover{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    border: 1px solid var(--secondary-color);
+}
+@media screen and (max-width: 768px) {
+    .random{
+        width: 90%;
+    }
+    .random h1{
+        font-size: 1rem;
+    }
+    .hidden-num{
+        width: 90%;
+    }
+}
