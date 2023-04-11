@@ -12,7 +12,7 @@
 body{  
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(var(--main-color), var(--secondary-color));
-    min-height: 200vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: contain;
 }
